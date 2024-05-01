@@ -14,4 +14,10 @@
             </div>
         </div>
     </div>
+
+
+    <div>
+        <p class="bg-white">hello</p>
+    </div>
+
 </x-app-layout>
