@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('gym_users', function (Blueprint $table) {
+        Schema::create('create_gym_users_table', function (Blueprint $table) {
             $table->bigIncrements('User_ID');
             $table->string('Email_address')->unique();
             $table->string('First_name', 15);
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('gym_users');
+        Schema::dropIfExists('create_gym_users_table');
     }
 };
