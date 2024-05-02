@@ -21,8 +21,7 @@
 
 
     <div>
-        <p class="bg-white">hello</p>
-        <a href='/appointment' class="text-white">Appointment</a>
+        <a href='/appointment' class="text-black">Appointment</a>
     </div>
 
 </x-app-layout>

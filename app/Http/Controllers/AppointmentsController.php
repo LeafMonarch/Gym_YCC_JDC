@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Appointment;
+use App\Models\Exercise;
+use App\Models\Coach;
 
 class AppointmentsController extends Controller
 {
@@ -12,10 +14,8 @@ class AppointmentsController extends Controller
      */
     public function index()
     {
-         $appointment = Appointment::all();
-
-        dd($appointment);
-        return view('appointment.index');
+        return view('appointmentBlog.index')
+            ->with('appointments', Appointment::orderBy('updated_at', 'DESC')->get());
     }
 
     /**
@@ -23,15 +23,27 @@ class AppointmentsController extends Controller
      */
     public function create()
     {
-        //
+        // $exercise = Exercise::all();
+        // dd($exercise);
+        //  return view('appointmentBlog.create');
+        return view('appointmentBlog.create')
+            ->with('exercises', Exercise::orderBy('updated_at', 'DESC')->get())
+            ->with('coaches', Coach::orderBy('updated_at', 'DESC')->get());
     }
 
     /**
      * Store a newly created resource in storage.
+     * 
+     * @param \Illuminate\Http\Request $request
+     * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'exercise_type' => 'required',
+            'decided_time' => 'required',
+            'coach_name' => 'required'
+        ]);
     }
 
     /**

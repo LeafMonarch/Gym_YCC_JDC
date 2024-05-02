@@ -14,7 +14,7 @@
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    <body class="font-sans antialiased">
+    {{-- <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
             @include('layouts.navigation')
 
@@ -31,14 +31,56 @@
             <main>
                 {{ $slot }}
             </main>
-        </div>
+        </div> --}}
 
-        <div>
+        {{-- <div>
             @yield('content')
-        </div>
+        </div> --}}
 
-        <div>
+         {{-- <div>
             @include('layouts.footer')
+        </div>
+    </body> --}}
+
+    <body class="bg-gray-100 h-screen antialiased leading-none font-sans">
+        <div id="app">
+            <header class="bg-gray-800 py-6">
+                <div class="container mx-auto flex justify-between items-center px-6">
+                    <div>
+                        <a href="{{ url('/dashboard') }}" class="text-lg font-semibold text-gray-100 no-underline">
+                            {{ config('app.name', 'Laravel') }}
+                        </a>
+                    </div>
+                    <nav class="space-x-4 text-gray-300 text-sm sm:text-base">
+                        <a class="no-underline hover:underline" href="/dashboard">Home</a>
+                        <a class="no-underline hover:underline" href="/appointment">Appointment</a>
+                        @guest
+                            <a class="no-underline hover:underline" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            @if (Route::has('register'))
+                                <a class="no-underline hover:underline" href="{{ route('register') }}">{{ __('Register') }}</a>
+                            @endif
+                        @else
+                            <span>{{ Auth::user()->name }}</span>
+    
+                            <a href="{{ route('logout') }}"
+                               class="no-underline hover:underline"
+                               onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="hidden">
+                                {{ csrf_field() }}
+                            </form>
+                        @endguest
+                    </nav>
+                </div>
+            </header>
+    
+            <main>
+                {{ $slot }}
+            </main>
+    
+            <div>
+                @include('layouts.footer')
+            </div>
         </div>
     </body>
 </html>

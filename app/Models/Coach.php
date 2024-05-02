@@ -6,12 +6,12 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Cviebrock\EloquentSluggable\Sluggable;
 
-class Appointment extends Model
+class Coach extends Model
 {
     use HasFactory;
     use Sluggable;
 
-    protected $fillable = ['user_id', 'decided_time', 'exercise_type', 'coach_id'];
+    protected $fillable = ['name', 'email','contact_number'];
 
     public function user()
     {
@@ -22,7 +22,7 @@ class Appointment extends Model
     {
         return [
             'slug' => [
-                'source' => 'exercise_type'
+                'source' => 'name'
             ]
         ];
     }
