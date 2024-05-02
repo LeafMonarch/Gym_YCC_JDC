@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('gym_appointments', function (Blueprint $table) {
+        Schema::create('appointments', function (Blueprint $table) {
             $table->increments('appointment_id');
             $table->unsignedBigInteger('user_id');
             $table->dateTime('decided_time');
@@ -20,12 +20,11 @@ return new class extends Migration
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users');
-            $table->foreign('coach_id')->references('coach_id')->on('gym_coaches');
-            $table->foreign('exercise_type')->references('exercise_type')->on('gym_exercises');
+            $table->foreign('coach_id')->references('coach_id')->on('coaches');
+            $table->foreign('exercise_type')->references('exercise_type')->on('exercises');
         });
 
-        DB::statement('ALTER TABLE gym_appointments AUTO_INCREMENT = 1');
-
+        DB::statement('ALTER TABLE appointments AUTO_INCREMENT = 1');
     }
 
     /**
@@ -33,6 +32,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //Schema::dropIfExists('gym_appointments');
+        //
     }
 };
