@@ -12,7 +12,7 @@ use App\Http\Controllers\AppointmentsController;
 
 Route::get('/', [PagesController::class, 'welcome']);
 
-Route::resource('/Appointment', AppointmentsController::class);
+Route::resource('/appointment', AppointmentsController::class);
 
 Route::get('/dashboard', function () {
     return view('dashboard');

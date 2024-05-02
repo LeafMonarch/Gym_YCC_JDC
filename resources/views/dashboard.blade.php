@@ -3,6 +3,10 @@
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
             {{ __('Dashboard') }}
         </h2>
+        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
+            {{-- {{ __('Appointment') }} --}}
+            <a href='/appointment' class="text-white">Appointment</a>
+        </h2>
     </x-slot>
 
     <div class="py-12">
@@ -18,6 +22,7 @@
 
     <div>
         <p class="bg-white">hello</p>
+        <a href='/appointment' class="text-white">Appointment</a>
     </div>
 
 </x-app-layout>
