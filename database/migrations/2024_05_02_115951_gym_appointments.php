@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('gym_appointments', function (Blueprint $table) {
             $table->increments('appointment_id');
-            $table->unsignedInteger('user_id');
+            $table->unsignedBigInteger('user_id');
             $table->dateTime('decided_time');
             $table->string('exercise_type', 20);
             $table->unsignedInteger('coach_id');
@@ -21,9 +21,11 @@ return new class extends Migration
 
             $table->foreign('user_id')->references('id')->on('users');
             $table->foreign('coach_id')->references('coach_id')->on('gym_coaches');
+            $table->foreign('exercise_type')->references('exercise_type')->on('gym_exercises');
         });
 
         DB::statement('ALTER TABLE gym_appointments AUTO_INCREMENT = 1');
+
     }
 
     /**

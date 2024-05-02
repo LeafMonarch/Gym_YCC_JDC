@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\Appointment;
 class AppointmentsController extends Controller
 {
     /**
@@ -11,6 +11,7 @@ class AppointmentsController extends Controller
      */
     public function index()
     {
+        $post = Post::all();
         return view('appointment.index');
     }
 
