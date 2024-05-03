@@ -78,7 +78,6 @@ class AppointmentsController extends Controller
     public function edit($slug)
     {
         return view('appointment.edit')
-            
             ->with('appointment', Appointment::where('slug', $slug)->first())
             ->with('exercises', Exercise::orderBy('updated_at', 'DESC')->get())
             ->with('coaches', Coach::orderBy('updated_at', 'DESC')->get());
@@ -98,14 +97,33 @@ class AppointmentsController extends Controller
         //     'description' => 'required',
         // ]);
 
-        Appointment::where('slug', $slug)
-            ->update([
-                'exercise_type' => $request->input('exercise_type'),
-                'slug' => SlugService::createSlug(Appointment::class, 'slug', $request->exercise_type),
-                'decided_time' => $request->input('decided_time'),
-                'coach_id' => $request->input('coach_id'),
-                'user_id' => auth()->user()->id
-            ]);
+
+        // Find the appointment by slug
+        $appointment = Appointment::where('slug', $slug)->first();
+
+        // Check if exercise_type has changed
+        if ($appointment->exercise_type !== $request->input('exercise_type')) {
+            // Update exercise_type and generate new slug
+            $appointment->exercise_type = $request->input('exercise_type');
+            $appointment->slug = SlugService::createSlug(Appointment::class, 'slug', $request->exercise_type);
+        }
+
+        // Update other fields
+        $appointment->decided_time = $request->input('decided_time');
+        $appointment->coach_id = $request->input('coach_id');
+        $appointment->user_id = auth()->user()->id;
+
+        // Save the changes
+        $appointment->save();
+
+        // Appointment::where('slug', $slug)
+        //     ->update([
+        //         'exercise_type' => $request->input('exercise_type'),
+        //         'slug' => SlugService::createSlug(Appointment::class, 'slug', $request->exercise_type),
+        //         'decided_time' => $request->input('decided_time'),
+        //         'coach_id' => $request->input('coach_id'),
+        //         'user_id' => auth()->user()->id
+        //     ]);
 
         return redirect('/appointment')
             ->with('message', 'Your Appointment has been updated & rearranged!');
