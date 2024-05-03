@@ -15,7 +15,8 @@ class AppointmentsController extends Controller
      */
     public function index()
     {
-        return view('appointmentBlog.index')
+        // return view('appointmentBlog.index')
+        return view('appointment.index')
             ->with('appointments', Appointment::orderBy('updated_at', 'DESC')->get());
     }
 
@@ -30,7 +31,8 @@ class AppointmentsController extends Controller
 
         // $coach = Coach::all();
         // dd($coach);
-        return view('appointmentBlog.create')
+        // return view('appointmentBlog.create')
+        return view('appointment.create')
             ->with('exercises', Exercise::orderBy('updated_at', 'DESC')->get())
             ->with('coaches', Coach::orderBy('updated_at', 'DESC')->get());
     }
@@ -56,7 +58,8 @@ class AppointmentsController extends Controller
             'user_id' => auth()->user()->id
         ]);
 
-        return redirect('/appointmentBlog')->with('message', 'Your Appointment has been set!');
+        // return redirect('/appointmentBlog')->with('message', 'Your Appointment has been set!');
+        return redirect('/appointment')->with('message', 'Your Appointment has been set!');
     }
 
     /**
@@ -70,9 +73,10 @@ class AppointmentsController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit($slug)
     {
-        //
+        return view('appointment.edit')
+            ->with('appointment', Appointment::where('slug', $slug)->first());
     }
 
     /**

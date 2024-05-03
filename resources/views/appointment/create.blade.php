@@ -27,7 +27,7 @@
 
     <div class="w-4/5 m-auto pt-20">
         <form 
-            action="/appointmentBlog"
+            action="/appointment"
             {{-- action="{{ route('appointment.store') }}" --}}
             method="POST"
             enctype="multipart/form-data">
@@ -64,6 +64,7 @@
                 type="submit"
                 class="uppercase mt-15 bg-blue-500 text-gray-100 text-lg font-extrabold py-4 px-8 rounded-3xl">
                 Submit Appointment
+                
             </button>
         </form>
     </div>

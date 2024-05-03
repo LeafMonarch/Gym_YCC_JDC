@@ -18,7 +18,7 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::post('/appointmentBlog', [AppointmentsController::class, 'store'])->name('appointment.store');
+Route::post('/appointment', [AppointmentsController::class, 'store'])->name('appointment.store');
 
 // Route::get('/appointmentBlog', function () {
 //     return view('/appointmentBlog/index');
