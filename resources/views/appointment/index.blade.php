@@ -65,7 +65,7 @@
             @if (isset(Auth::user()->id) && Auth::user()->id == $appointment->user_id)
                 <span class="float-right">
                     <a 
-                        href="/blog/{{ $appointment->slug }}/edit"
+                        href="/appointment/{{ $appointment->slug }}/edit"
                         class="text-gray-700 italic hover:text-gray-900 pb-1 border-b-2">
                         Edit
                     </a>
@@ -73,7 +73,7 @@
 
                 <span class="float-right">
                      <form 
-                        action="/blog/{{ $appointment->slug }}"
+                        action="/appointment/{{ $appointment->slug }}"
                         method="POST">
                         @csrf
                         @method('delete')

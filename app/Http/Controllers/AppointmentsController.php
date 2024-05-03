@@ -22,16 +22,11 @@ class AppointmentsController extends Controller
 
     /**
      * Show the form for creating a new resource.
+     * 
+     * @return \Illuminate\Http\Response
      */
     public function create()
     {
-        // $exercise = Exercise::all();
-        // dd($exercise);
-        //  return view('appointmentBlog.create');
-
-        // $coach = Coach::all();
-        // dd($coach);
-        // return view('appointmentBlog.create')
         return view('appointment.create')
             ->with('exercises', Exercise::orderBy('updated_at', 'DESC')->get())
             ->with('coaches', Coach::orderBy('updated_at', 'DESC')->get());
@@ -51,19 +46,24 @@ class AppointmentsController extends Controller
             'coach_id' => 'required'
         ]);
 
+        // $slug = SlugService::createSlug(Appointment::class, 'slug', $request->exercise_type);
+        // dd($slug);
+
         Appointment::create([
             'exercise_type' => $request->input('exercise_type'),
+            'slug' => SlugService::createSlug(Appointment::class, 'slug', $request->exercise_type),
             'decided_time' => $request->input('decided_time'),
             'coach_id' => $request->input('coach_id'),
             'user_id' => auth()->user()->id
         ]);
 
-        // return redirect('/appointmentBlog')->with('message', 'Your Appointment has been set!');
         return redirect('/appointment')->with('message', 'Your Appointment has been set!');
     }
 
     /**
      * Display the specified resource.
+     *  @param  string  $slug
+     * @return \Illuminate\Http\Response
      */
     public function show(string $id)
     {
@@ -72,20 +72,43 @@ class AppointmentsController extends Controller
 
     /**
      * Show the form for editing the specified resource.
+     *  @param  string  $slug
+     * @return \Illuminate\Http\Response
      */
     public function edit($slug)
     {
         return view('appointment.edit')
-            ->with('appointment', Appointment::where('slug', $slug)->first());
             
+            ->with('appointment', Appointment::where('slug', $slug)->first())
+            ->with('exercises', Exercise::orderBy('updated_at', 'DESC')->get())
+            ->with('coaches', Coach::orderBy('updated_at', 'DESC')->get());
     }
 
     /**
      * Update the specified resource in storage.
+     * 
+     * @param  \Illuminate\Http\Request  $request
+     * @param  string  $slug
+     * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, $slug)
     {
-        //
+        // $request->validate([
+        //     'title' => 'required',
+        //     'description' => 'required',
+        // ]);
+
+        Appointment::where('slug', $slug)
+            ->update([
+                'exercise_type' => $request->input('exercise_type'),
+                'slug' => SlugService::createSlug(Appointment::class, 'slug', $request->exercise_type),
+                'decided_time' => $request->input('decided_time'),
+                'coach_id' => $request->input('coach_id'),
+                'user_id' => auth()->user()->id
+            ]);
+
+        return redirect('/appointment')
+            ->with('message', 'Your Appointment has been updated & rearranged!');
     }
 
     /**

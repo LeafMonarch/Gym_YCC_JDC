@@ -13,9 +13,10 @@ return new class extends Migration
     {
         Schema::create('appointments', function (Blueprint $table) {
             $table->increments('appointment_id');
-            $table->unsignedBigInteger('user_id');
-            $table->dateTime('decided_time');
             $table->string('exercise_type', 20);
+            $table->string('slug');
+            $table->dateTime('decided_time');
+            $table->unsignedBigInteger('user_id');
             $table->unsignedInteger('coach_id');
             $table->timestamps();
 
