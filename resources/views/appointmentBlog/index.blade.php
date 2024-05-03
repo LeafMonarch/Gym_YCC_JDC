@@ -12,7 +12,15 @@
             </h1>
         </div>
     </div>
-{{-- <div class="text-white">{{ $appointments}}</div> --}}
+
+@if (session()->has('message'))
+<div class="w-4/5 m-auto mt-10 pl-2">
+    <p class="w-2/6 mb-4 text-gray-50 bg-green-500 rounded-2xl py-4">
+        {{ session()->get('message') }}
+    </p>
+</div>
+@endif
+
 
 @if (Auth::check())
     <div class="pt-15 w-4/5 m-auto">
@@ -50,9 +58,9 @@
             <br>
             <br>
             <br>
-            <a href="/appointmentBlog/" class="uppercase bg-blue-500 text-gray-100 text-lg font-extrabold py-4 px-8 rounded-3xl">
+            {{-- <a href="/appointmentBlog/" class="uppercase bg-blue-500 text-gray-100 text-lg font-extrabold py-4 px-8 rounded-3xl">
                 Keep Reading
-            </a>
+            </a> --}}
 
             {{-- @if (isset(Auth::user()->id) && Auth::user()->id == $post->user_id)
                 <span class="float-right">

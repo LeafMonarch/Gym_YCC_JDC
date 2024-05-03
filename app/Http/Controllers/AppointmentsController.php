@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Appointment;
 use App\Models\Exercise;
 use App\Models\Coach;
+use Cviebrock\EloquentSluggable\Services\SlugService;
 
 class AppointmentsController extends Controller
 {
@@ -26,6 +27,9 @@ class AppointmentsController extends Controller
         // $exercise = Exercise::all();
         // dd($exercise);
         //  return view('appointmentBlog.create');
+
+        // $coach = Coach::all();
+        // dd($coach);
         return view('appointmentBlog.create')
             ->with('exercises', Exercise::orderBy('updated_at', 'DESC')->get())
             ->with('coaches', Coach::orderBy('updated_at', 'DESC')->get());
@@ -42,8 +46,17 @@ class AppointmentsController extends Controller
         $request->validate([
             'exercise_type' => 'required',
             'decided_time' => 'required',
-            'coach_name' => 'required'
+            'coach_id' => 'required'
         ]);
+
+        Appointment::create([
+            'exercise_type' => $request->input('exercise_type'),
+            'decided_time' => $request->input('decided_time'),
+            'coach_id' => $request->input('coach_id'),
+            'user_id' => auth()->user()->id
+        ]);
+
+        return redirect('/appointmentBlog')->with('message', 'Your Appointment has been set!');
     }
 
     /**

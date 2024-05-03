@@ -13,25 +13,25 @@
         </div>
     </div>
 
+    @if ($errors->any())
+    <div class="w-4/5 m-auto">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li class="w-1/5 mb-4 text-gray-50 bg-red-700 rounded-2xl py-4">
+                    {{ $error }}
+                </li>
+            @endforeach
+        </ul>
+    </div>
+    @endif
+
     <div class="w-4/5 m-auto pt-20">
         <form 
             action="/appointmentBlog"
+            {{-- action="{{ route('appointment.store') }}" --}}
             method="POST"
             enctype="multipart/form-data">
             @csrf
-    
-            <select 
-            name="exercise_type"
-            class="bg-transparent text-greyyy block border-b-2 w-full h-20 text-3xl outline-none my-2 hover:bg-greyyy hover:text-grey">
-            <option value="">Select Exercise</option>
-            <option value="Aerobic">Aerobic</option>
-            <option value="Cardio">Cardio</option>
-            <option value="Calisthenic">Calisthenic</option>
-            <option value="Cycling">Cycling</option>
-            <option value="Flexibility">Flexibility</option>
-            <option value="Strength training">Strength training</option>
-            <option value="Swimming">Swimming</option>
-            </select>
 
             <select 
             name="exercise_type"
@@ -45,19 +45,19 @@
             <input class="bg-transparent text-greyyy block border-b-2 w-full h-20 text-3xl outline-none my-2 hover:bg-greyyy hover:text-grey" type="datetime-local" id="decided_time" name="decided_time">
 
             <select 
-            name="coach_name"
+            name="coach_id"
             class="bg-transparent text-greyyy block border-b-2 w-full h-20 text-3xl outline-none my-2 hover:bg-greyyy hover:text-grey">
             <option value="">Select Coach</option>
             @foreach($coaches as $coach)
-            <option value="{{ $coach->name }}">{{ $coach->name }}</option>
+            <option value="{{ $coach->coach_id }}">{{ $coach->name }}</option>
             @endforeach
             </select>
     
-            
-            <textarea 
+            {{-- We can add this later on --}}
+            {{-- <textarea 
                 name="comment"
                 placeholder="Comment..."
-                class="py-20 bg-transparent block border-b-2 w-full h-60 text-xl outline-none"></textarea>
+                class="py-20 bg-transparent block border-b-2 w-full h-60 text-xl outline-none"></textarea> --}}
     
     
             <button    
