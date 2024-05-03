@@ -15,6 +15,7 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+                    <a class="no-underline hover:underline" href="/appointment">Appointment</a>
                 </div>
             </div>
 

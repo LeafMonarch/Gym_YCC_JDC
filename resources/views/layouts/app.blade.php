@@ -14,10 +14,23 @@
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    {{-- <body class="font-sans antialiased">
-        <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
-            @include('layouts.navigation')
 
+
+
+
+
+
+
+
+
+
+
+
+
+    <body class="font-sans antialiased">
+        <div class="min-h-screen bg-gray-100 ">
+            @include('layouts.navigation')
+            
             <!-- Page Heading -->
             @if (isset($header))
                 <header class="bg-white dark:bg-gray-800 shadow">
@@ -31,18 +44,28 @@
             <main>
                 {{ $slot }}
             </main>
-        </div> --}}
+        </div>
 
-        {{-- <div>
+        <div>
             @yield('content')
-        </div> --}}
+        </div>
 
-         {{-- <div>
+         <div>
             @include('layouts.footer')
         </div>
-    </body> --}}
+    </body>
 
-    <body class="bg-gray-100 h-screen antialiased leading-none font-sans">
+
+
+
+
+
+
+
+    {{-- Jamie, just leave the ones down here for a while, might not know when we'll use it --}}
+
+
+    {{-- <body class="bg-gray-100 h-screen antialiased leading-none font-sans">
         <div id="app">
             <header class="bg-gray-800 py-6">
                 <div class="container mx-auto flex justify-between items-center px-6">
@@ -82,5 +105,5 @@
                 @include('layouts.footer')
             </div>
         </div>
-    </body>
+    </body> --}}
 </html>

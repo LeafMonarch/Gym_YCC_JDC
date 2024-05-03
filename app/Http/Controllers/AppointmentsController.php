@@ -134,7 +134,7 @@ class AppointmentsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(string $id)
+    public function destroy($slug)
     {
         $appointment = Appointment::where('slug', $slug);
         $appointment->delete();
