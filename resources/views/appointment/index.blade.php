@@ -58,14 +58,14 @@
             <br>
             <br>
             <br>
-            {{-- <a href="/appointmentBlog/" class="uppercase bg-blue-500 text-gray-100 text-lg font-extrabold py-4 px-8 rounded-3xl">
+            <a href="/appointment/" class="uppercase bg-blue-500 text-gray-100 text-lg font-extrabold py-4 px-8 rounded-3xl">
                 Keep Reading
-            </a> --}}
+            </a>
 
-            {{-- @if (isset(Auth::user()->id) && Auth::user()->id == $post->user_id)
+            @if (isset(Auth::user()->id) && Auth::user()->id == $appointment->user_id)
                 <span class="float-right">
                     <a 
-                        href="/blog/{{ $post->slug }}/edit"
+                        href="/blog/{{ $appointment->slug }}/edit"
                         class="text-gray-700 italic hover:text-gray-900 pb-1 border-b-2">
                         Edit
                     </a>
@@ -73,7 +73,7 @@
 
                 <span class="float-right">
                      <form 
-                        action="/blog/{{ $post->slug }}"
+                        action="/blog/{{ $appointment->slug }}"
                         method="POST">
                         @csrf
                         @method('delete')
@@ -86,7 +86,11 @@
 
                     </form>
                 </span>
-            @endif --}}
+            @endif
+
+
+
+
         </div>
     </div>
 @endforeach
