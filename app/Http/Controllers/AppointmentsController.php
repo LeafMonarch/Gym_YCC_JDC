@@ -131,10 +131,16 @@ class AppointmentsController extends Controller
 
     /**
      * Remove the specified resource from storage.
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
      */
     public function destroy(string $id)
     {
-        //
+        $appointment = Appointment::where('slug', $slug);
+        $appointment->delete();
+
+        return redirect('/appointment')
+            ->with('message', 'Your Appointment has been deleted!');
     }
 }
 
