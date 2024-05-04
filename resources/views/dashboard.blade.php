@@ -18,13 +18,295 @@
 </x-app-layout>
 
 
+<style>
+
+
+
+   
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+
+body
+{
+    margin: 0;
+    background-color: black;
+}
+
+h1
+{
+    font-family: Oswald;
+    color: #f36100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2
+{
+    font-family: Oswald;
+    font-size: 18.5px;
+    margin-right: 50px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+h2#h2_Nohover
+{
+     font-family: Oswald;
+    margin-top: 30px;
+    font-family: Oswald;
+    font-size: 30px;
+    margin-right: 50px;
+    color: orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+h2:hover
+{
+     font-family: Oswald;
+    font-size: 18.5px;
+    margin-right: 50px;
+    color: #f36100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+div.header {
+/*    position: fixed;*/
+ font-family: Oswald;
+    opacity: 1;
+    padding: 5px;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 20px;
+    margin-right: 20px;
+    min-width: 1454px;
+    z-index: 1;
+    align-content: center;
+    align-items: center;
+    padding-top: 30px;
+}
+
+div#Ancher
+{
+     font-family: Oswald;
+    color: #f36100;
+    display: flex;
+    margin-right: 20px;
+}
+
+div#Ancher_div
+{
+    display: flex;
+     font-family: Oswald;
+}
+
+img#Logo
+{
+    display: flex;
+    margin-right: 275px;
+    margin-bottom: 30px;
+}
+
+h3
+{
+
+     font-family: Oswald;
+    color: white;
+    font-size: 25px;
+    margin-right: 200px;
+    border: #f36100 thick solid;
+    padding: 15px;
+}
+
+
+#add_gallery{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 85px;
+  margin: 12px 60px;
+
+}
+
+
+#each_add
+{
+    height: 390px;
+    
+}
+
+
+div#adds
+{
+    display: flex;
+    margin-left: 50PX;
+}
+
+.column {
+  float: left;
+  
+ padding: 20px;
+ margin-left: 20px;
+}
+
+
+div.footer_column
+{
+ float: left;
+ display: flex;
+ padding: 20px;
+ margin-left: 20px;
+ width: 250px;
+ height: 150px;
+ flex-direction: column;
+ color: white;
+ font-family: Oswald;
+ align-items: flex-start;
+
+}
+
+
+
+
+
+/* Clearfix (clear floats) */
+.row::after {
+  clear: both;
+  display: table;
+}
+div.row
+{
+    display: flex;
+    margin-left: 125px;
+}
+
+
+div.row_icons
+{
+    display: flex;
+    margin-left: 125px;
+    margin-top: 150px;
+    justify-content: center;
+    align-items: center;
+}
+
+ p
+ {
+     margin: 0px;
+ }
+ 
+ 
+ div#map
+ {
+     display: flex;
+     margin-left: 165px;
+ }
+
+
+ footer
+ {
+     background-color: #0a0a0a;
+ }
+ 
+div.footer_row
+{
+    display: flex;
+    margin-left: 305px;
+    padding-bottom: 50px;
+}
+
+
+.footer_column {
+  float: left;
+  width: 33%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.footer_row:after {
+  display: table;
+  clear: both;
+}
+
+
+
+/*slide show*/
+
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+ max-width: 1500px;
+    position: relative;
+    margin: auto;
+    margin-top: 10px;
+}
+
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+.About-Us-container
+{
+     max-width: 1500px;
+    position: relative;
+    margin: auto;
+    margin-top: 10px;
+}
+
+
+/*grid*/
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+ align-items: center;
+    justify-content: center;
+  padding: 10px;
+}
+.grid-item {
+  text-align: center;
+}
+
+
+
+   
+   
+   
+   
+</style>
+
+
 
 
 
 <!DOCTYPE html>
 <html> 
     <head>
-        
+
     <div class="header">
        <img src="https://themewagon.github.io/gymlife/img/logo.png" width="175px" height="50px" id="Logo" alt="Logo">
         
