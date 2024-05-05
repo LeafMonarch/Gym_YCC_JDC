@@ -9,8 +9,8 @@
 
 
 
-
 <style>
+
 
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
@@ -125,6 +125,10 @@ h3
   
 }
 
+div.homepage_slideshow-container
+{
+    margin-left: 10px;
+}
 
 #add_gallery{
   display: grid;
@@ -470,19 +474,8 @@ img#slide_images
 
 
 
+
 </style>
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

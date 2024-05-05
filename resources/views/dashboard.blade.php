@@ -143,8 +143,13 @@ h3
     margin-right: 200px;
     border: #f36100 thick solid;
     padding: 15px;
+  
 }
 
+div.homepage_slideshow-container
+{
+    margin-left: 10px;
+}
 
 #add_gallery{
   display: grid;
@@ -313,6 +318,185 @@ img {vertical-align: middle;}
 
 
 
+.About-Us-container
+{
+    
+    margin-left: 30px;
+    max-width: 1500px;
+    position: relative;
+    margin: auto;
+    
+}
+
+
+div#About-Us-WhatWeDo
+{
+    margin-left: 10px;
+    display: flex;
+    margin-bottom: 70px;
+
+
+}
+
+
+div.stats
+{
+        background-color: gray;
+        border-radius: 20px;
+
+}
+
+div#About-Us-Stats
+{
+ width: 800px;
+ height: 20px;
+margin-top: 120px;
+margin-left: 30px;
+ 
+}
+
+
+
+a#percentage
+{
+   
+    font-size: 20px;
+    margin-left: 700px;
+    color: white;
+}
+
+
+div#Border
+{
+    border: 3px solid #f36100;
+    border-radius: 20px;
+}
+
+
+h2#h2_left
+{
+    margin-top: 20px;
+    font-family: Oswald;
+    font-size: 18.5px;
+    margin-left: 100px;
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    font-weight: bold;   
+    margin-bottom: 0px;
+}
+
+h1#h1_Left
+{
+    
+    font-family: Oswald;
+    margin-left: 100px;
+    color: #f36100;
+    display: flex;
+    justify-content: flex-start;
+    font-weight: bold;   
+    margin-top: 0px;
+}
+
+
+
+div#Our_Team
+{
+    background-color: #151515;
+}
+
+
+p
+{
+    color: white;
+    margin-left: 6px;
+}
+
+
+div#booking_headers
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 120px;
+    width: 100%;
+}
+
+
+img#slide_images
+{
+    margin-top: 50px;
+    width: 1000px;
+    height: 650px;
+}
+
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 30%;
+  width: 40px;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #ec5905;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+
+
+
+
+
+
 
 
 </style>
@@ -458,7 +642,7 @@ setTimeout(showSlides, 2000); // Change image every 2 seconds
 </div>
 
  
- <section></section>
+
  
  <div class="footer_row">
 <div class="footer_column" >
