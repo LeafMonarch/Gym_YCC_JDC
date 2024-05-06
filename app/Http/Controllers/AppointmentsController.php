@@ -77,7 +77,8 @@ class AppointmentsController extends Controller
      */
     public function show($slug)
     {
-        //
+        return view('appointment.show')
+            ->with('appointment', Appointment::where('slug', $slug)->first());
     }
 
     /**
