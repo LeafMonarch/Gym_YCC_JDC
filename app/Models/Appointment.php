@@ -11,7 +11,7 @@ class Appointment extends Model
     use HasFactory;
     use Sluggable;
 
-    protected $fillable = ['exercise_type', 'slug', 'decided_time', 'user_id', 'coach_id'];
+    protected $fillable = ['exercise_type', 'slug', 'comment', 'image_path', 'decided_time', 'user_id', 'coach_name'];
 
     protected $primaryKey = 'appointment_id';
     

@@ -20,6 +20,7 @@ Route::get('/dashboard', function () {
 
 Route::post('/appointment', [AppointmentsController::class, 'store'])->name('appointment.store');
 
+Route::get('/newpage', [PagesController::class, 'newpage'])->name('newpage');
 // Route::get('/appointmentBlog', function () {
 //     return view('/appointmentBlog/index');
 // })->middleware(['auth', 'verified'])->name('appointment');

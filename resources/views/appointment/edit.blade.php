@@ -45,12 +45,17 @@
 
             <input class="bg-transparent text-greyyy block border-b-2 w-full h-20 text-3xl outline-none my-2 hover:bg-greyyy hover:text-grey" type="datetime-local" id="decided_time" name="decided_time" value="{{ $appointment->decided_time }}">
 
+            <textarea 
+            name="comment"
+            placeholder="Comment..."
+            class="py-20 bg-transparent block border-b-2 w-full h-60 text-xl outline-none">{{ $appointment->comment }}</textarea>
+
             <select 
-            name="coach_id"
+            name="coach_name"
             class="bg-transparent text-greyyy block border-b-2 w-full h-20 text-3xl outline-none my-2 hover:bg-greyyy hover:text-grey">
-            <option value="">{{ $appointment->name }}</option>
+            <option value="">{{ $appointment->coach_name }}</option>
             @foreach($coaches as $coach)
-            <option value="{{ $coach->coach_id }}">{{ $coach->name }}</option>
+            <option value="{{ $coach->name }}">{{ $coach->name }}</option>
             @endforeach
             </select>
     

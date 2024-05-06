@@ -10,6 +10,11 @@ use Cviebrock\EloquentSluggable\Services\SlugService;
 
 class AppointmentsController extends Controller
 {
+    // public function __construct()
+    // {
+    //     $this->middleware('auth', ['except' => ['dashboard', 'show']]);
+    // }
+
     /**
      * Display a listing of the resource.
      */
@@ -43,17 +48,22 @@ class AppointmentsController extends Controller
         $request->validate([
             'exercise_type' => 'required',
             'decided_time' => 'required',
-            'coach_id' => 'required'
+            'comment' => 'required',
+            'image' => 'required|mimes:jpg,png,jpeg|max:5048',
+            'coach_name' => 'required'
         ]);
 
-        // $slug = SlugService::createSlug(Appointment::class, 'slug', $request->exercise_type);
-        // dd($slug);
+        $newImageName = uniqid() . '-' . $request->exercise_type . '.' . $request->image->extension();
+
+        $request->image->move(public_path('images'), $newImageName);
 
         Appointment::create([
             'exercise_type' => $request->input('exercise_type'),
             'slug' => SlugService::createSlug(Appointment::class, 'slug', $request->exercise_type),
             'decided_time' => $request->input('decided_time'),
-            'coach_id' => $request->input('coach_id'),
+            'comment' => $request->input('comment'),
+            'coach_name' => $request->input('coach_name'),
+            'image_path' => $newImageName,
             'user_id' => auth()->user()->id
         ]);
 
@@ -65,7 +75,7 @@ class AppointmentsController extends Controller
      *  @param  string  $slug
      * @return \Illuminate\Http\Response
      */
-    public function show(string $id)
+    public function show($slug)
     {
         //
     }
@@ -92,28 +102,45 @@ class AppointmentsController extends Controller
      */
     public function update(Request $request, $slug)
     {
+
         // $request->validate([
-        //     'title' => 'required',
-        //     'description' => 'required',
+        //     'exercise_type' => 'required',
+        //     'decided_time' => 'required',
+        //     'comment' => 'required',
+        //     'coach_name' => 'required',
         // ]);
 
-
-        // Find the appointment by slug
+        // dd($request->all());
+        // // Find the appointment by slug
         $appointment = Appointment::where('slug', $slug)->first();
 
+        // // Check if exercise_type has changed
+        // if ($appointment->exercise_type !== $request->input('exercise_type')) {
+        //     // Update exercise_type and generate new slug
+        //     $appointment->exercise_type = $request->input('exercise_type');
+        //     $appointment->slug = SlugService::createSlug(Appointment::class, 'slug', $request->exercise_type);
+        // }
+
+        if (!$request->has('exercise_type') || !$request->input('exercise_type')) {
+            // Handle the case where exercise_type is null or empty
+            // For example, you can return a response indicating that exercise_type is required
+            return redirect()->back()->withErrors(['exercise_type' => 'Exercise type is required']);
+        }
+    
         // Check if exercise_type has changed
         if ($appointment->exercise_type !== $request->input('exercise_type')) {
             // Update exercise_type and generate new slug
             $appointment->exercise_type = $request->input('exercise_type');
-            $appointment->slug = SlugService::createSlug(Appointment::class, 'slug', $request->exercise_type);
+            $appointment->slug = SlugService::createSlug(Appointment::class, 'slug', $request->input('exercise_type'));
         }
 
-        // Update other fields
+        // // Update other fields
         $appointment->decided_time = $request->input('decided_time');
-        $appointment->coach_id = $request->input('coach_id');
+        $appointment->comment = $request->input('comment');
+        $appointment->coach_name = $request->input('coach_name');
         $appointment->user_id = auth()->user()->id;
 
-        // Save the changes
+        // // Save the changes
         $appointment->save();
 
         // Appointment::where('slug', $slug)
@@ -121,7 +148,8 @@ class AppointmentsController extends Controller
         //         'exercise_type' => $request->input('exercise_type'),
         //         'slug' => SlugService::createSlug(Appointment::class, 'slug', $request->exercise_type),
         //         'decided_time' => $request->input('decided_time'),
-        //         'coach_id' => $request->input('coach_id'),
+        //         'comment' => $request->input('comment'),
+        //         'coach_name' => $request->input('coach_name'),
         //         'user_id' => auth()->user()->id
         //     ]);
 
