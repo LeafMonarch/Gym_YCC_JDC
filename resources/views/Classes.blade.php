@@ -20,6 +20,94 @@
 
     
     
+       <div id="intro">
+<img src="https://assets-global.website-files.com/61f6a1f670934ed39d548853/64b39fcf00c24aaa249a8e96_gym-ad.webp" style="width:100%; height:700px">
+    </div>
+
+ 
+    
+    
+    <div id = content>
+        
+        
+        
+        <div id = "left">
+            <img id="yoga" src="https://themewagon.github.io/gymlife/img/classes/class-details/class-detailsl.jpg">
+
+            
+             <h1 id="h1_Left_White">BODY BUILDING</h1>
+             
+             <p id ="exercises">
+                 
+                Bodybuilding is a fitness discipline centered around resistance training, primarily weightlifting, aimed at enhancing muscle size, strength, and definition. It involves systematic and intense workouts targeting specific muscle groups to promote growth and development. Beyond just physical strength, bodybuilding also emphasizes sculpting the physique for aesthetic purposes, focusing on proportions and symmetry.
+                 
+             </p>
+             
+             
+             
+             <h1 id="h1_Left_White">TRAINER</h1>
+             
+             <p id ="exercises">
+                 
+               Personal trainers are fitness professionals who work closely with individuals to help them achieve their health and fitness goals. They provide personalized exercise programs, nutritional guidance, and motivation to their clients, tailoring each session to meet the unique needs and abilities of the individual. Trainers often assess their clients' fitness levels, track progress, and make adjustments to the program as needed to ensure continued improvement. Beyond just physical training, they also offer support, encouragement, and accountability to help clients stay on track and maintain their commitment to a healthy lifestyle. 
+                 
+             </p>
+            
+            
+            
+        </div>
+        
+        
+        <div>
+            <div> 
+                
+                
+                
+                
+                <h1 id="Middle_White">CATEGORIES</h1>
+                <br>
+                
+                <div id = "courses">
+                    
+<ul>
+                                <li>Yoga <span>12</span></li>
+                                <li>Runing <span>32</span></li>
+                                <li>Weightloss <span>86</span></li>
+                                <li>Cario <span>25</span></li>
+                                <li>Body buiding <span>36</span></li>
+                                <li>Nutrition <span>15</span></li>
+                            </ul>
+                    
+                </div>
+                
+                <div>
+                    
+                    <h1 id="Middle_White">LATEST POSTS</h1>
+                    
+         
+                      <div>
+      <div id="news_images"><img src="https://themewagon.github.io/gymlife/img/classes/class-5.jpg" style="width:350px"></div>
+  </div>
+              
+                    
+  
+             <div>
+          <div id="news_images"><img src="https://themewagon.github.io/gymlife/img/letest-blog/latest-2.jpg" style="width:150px"><p>Grilled Potato and Green Bean Salad</p></div>
+  </div>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+        
+        
+        
+        
+        
+    </div>
+    
+    
     
     
     
