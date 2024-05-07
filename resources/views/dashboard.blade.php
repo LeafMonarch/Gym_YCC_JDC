@@ -1,3 +1,5 @@
+<!--https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_slideshow-->
+
 <link href="newcss.css" rel="stylesheet" type="text/css"/>
 <!DOCTYPE html>
 <html> 
