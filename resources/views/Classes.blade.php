@@ -7,9 +7,7 @@
         <link href="newcss.css" rel="stylesheet" type="text/css">
     </head>
 
-
     <style>
-
 
 
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
@@ -679,11 +677,96 @@ div#Trainer_Info
 }
 
 
+div#Classes
+{
+    margin-top: 100px;
+    width: 70%;
+    display: flex;
+    margin-left: 250px;
+}
 
 
-    </style>
 
 
+
+
+
+
+
+
+
+
+/* Weekdays */
+.weekdays th{
+  text-align: center;
+  color:white;
+  font-size: 100%;
+  font-family: Oswald;
+  font-weight: bold;
+  background-color: #f36100;
+}
+
+/* Time */
+.time {
+  text-align: center;
+  color: #f36100;
+  font-size: 100%;
+  font-family: Oswald;
+  font-weight: bold;
+  background:  black;
+}
+
+/* Row Height */
+tr{
+   height: 4em;
+}
+
+/* Events */
+td {
+  color: #b2b2b2;
+  text-align: center;
+  font-weight: bold;
+  font-size: 90%;
+  font-family: Oswald;
+  height: 115px;
+}
+
+
+td:hover {
+  color: white;
+  font-size: 100%;
+}
+
+/* Alternate rows */
+tr:nth-child(odd) td:nth-child(even),
+tr:nth-child(even) td:nth-child(odd) {
+  background-color: #151515;
+}
+
+/* Resetting background for other cells */
+tr:nth-child(odd) td:nth-child(odd),
+tr:nth-child(even) td:nth-child(even) {
+  background-color: transparent;
+}
+
+
+
+.workout {
+  width: 20%;  
+  font-family: Oswald;
+}
+
+
+
+table {
+    border: solid thick #656565;
+}
+
+
+
+
+
+</style>
 
     <body>
         <div class="header">
@@ -835,8 +918,77 @@ div#Trainer_Info
         <div id='Classes'>
             
             
-            
-            
+<!--https://codepen.io/Stig-/pen/pomzbmY-->
+
+<table cellpadding="5" cellspacing="0" border="5" width="100%">
+<thead>
+  <tr class="weekdays">
+    <th width="5%">&nbsp;</th>
+    
+    <th width="10%">Monday</th>
+    <th width="10%">Tuesday</th>
+    <th width="10%">Wednesday</th>
+    <th width="10%">Thursady</th>
+    <th width="10%">Friday</th>
+    <th width="10%">Saturady</th>
+    <th width="10%">Sunday</th>
+  </tr>
+</thead>
+
+<tbody>
+
+  <tr>
+    <td class="time">6:00am - 8:00am</td>
+    <td>WEIGHT LOOSE</td>
+    <td>CARDIO</td>
+    <td>YOGA</td>
+    <td>FITNESS</td>
+    <td></td>
+    <td>BOXING</td>
+    <td>BODY BUILDING</td>
+  </tr>
+  <tr>
+    <td class="time">10:00am-12:00am</td>
+    <td></td>
+    <td>FITNESS</td>
+    <td>WEIGHT LOOSE</td>
+    <td>CARDIO</td>
+    <td>BODY BUILDING</td>
+    <td>KARATE</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td class="time">5:00pm-7:00pm</td>
+    <td>BOXING</td>
+    <td>KARATE</td>
+    <td>BODY BUILDING</td>
+    <td></td>
+    <td>YOGA</td>
+    <td>CARDIO</td>
+    <td>FITNESS</td>
+  </tr>
+  <tr>
+   <td class="time">7:00pm-9:00pm</td>
+    <td>CARDIO</td>
+    <td></td>
+    <td>BOXING</td>
+    <td>YOGA</td>
+    <td>KARATE</td>
+    <td>BOXING</td>
+    <td>WEIGHT LOOSE</td>
+    
+  </tr>
+  
+  
+</tbody>
+
+
+
+</table>
+
+
+
+
             
             
             
