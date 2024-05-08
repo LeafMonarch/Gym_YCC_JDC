@@ -1,3 +1,6 @@
+<!--https://www.w3schools.com/css/tryit.asp?filename=trycss_grid-->
+
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -6,6 +9,7 @@
         <title>Course notes example code</title>
         <link href="newcss.css" rel="stylesheet" type="text/css">
     </head>
+
 
 
     <style>
@@ -48,7 +52,7 @@ h2#h2_Nohover
     font-family: Oswald;
     font-size: 30px;
     margin-right: 50px;
-    color: orange;
+    color: #f36100;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -766,21 +770,59 @@ table {
 
 .Services_grid-container {
   display: grid;
-  grid-template-columns: auto auto auto;
-  background-color: #2196F3;
+  grid-template-columns: auto auto auto auto; /* Changed to four columns */
   padding: 10px;
 }
+
 .Services_grid-item {
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(0, 0, 0, 0.8);
-  padding: 20px;
+  
+  
   font-size: 30px;
   text-align: center;
+  background-color: #363636;
+  height: 290px;
+  width:290px; 
 }
 
+
+
+h1#h1_Grid
+{
+    
+    font-family: Oswald;
+    display: flex;
+    font-size: 26px;
+    justify-content: flex-start;
+    font-weight: bold;   
+    margin-top: 0px;
+    color: #f36100;
+    margin: 0%;
+    margin-left: 30px;
+    margin-top: 40px;
+}
+   
+
+
+p#p_Grid
+{
+    
+    font-family: Oswald;
+    display: flex;
+    font-size: 18px;
+    justify-content: flex-start;
+    font-weight: bold;   
+    margin-top: 0px;
+    color: white;
+    margin: 0%;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 20px;
+}
+   
 
 
     </style>
+
 
 
 
@@ -810,22 +852,25 @@ table {
             <div>
                 
                 <div class="grid-container">
-  <div class="Services_grid-item">1</div>
-  <div class="Services_grid-item">2</div>
-  <div class="Services_grid-item">3</div>  
-  <div class="Services_grid-item">4</div>
-  <div class="Services_grid-item">5</div>
-  <div class="Services_grid-item">6</div>  
-  <div class="Services_grid-item">7</div>
-  <div class="Services_grid-item">8</div>
-</div>
-                
+  <div class="Services_grid-item"><img src="https://themewagon.github.io/gymlife/img/services/services-1.jpg"></div>
+  <div class="Services_grid-item"><h1 id="h1_Grid">Personal training</h1><p id="p_Grid">Train with the best of the best and get the professional training you deserve</p></div>
+  <div class="Services_grid-item"><img src="https://themewagon.github.io/gymlife/img/services/services-2.jpg"></div>  
+  <div class="Services_grid-item"><h1 id="h1_Grid">Group fitness classes</h1><p id="p_Grid">Join our community and find friends and make your workout all the more enjoyable</p></div>
+  <div class="Services_grid-item"><h1 id="h1_Grid">Body building</h1><p id="p_Grid">Get custom tailored advice from professionals about diet and muscle growth for the best results </p></div>
+  <div class="Services_grid-item"><img src="https://themewagon.github.io/gymlife/img/services/services-3.jpg"></div>  
+  <div class="Services_grid-item"><h1 id="h1_Grid">Strength training</h1><p id="p_Grid">Get professional training from out coaches for the best possible results </p></div>
+  <div class="Services_grid-item"><img src="https://themewagon.github.io/gymlife/img/services/services-4.jpg"></div>
+  
             </div>
-            
+    
         </div>
 
             
-        
+        <div class="container">
+  <img src="https://thumb.photo-ac.com/20/206665476dfe19e3acc8db6015bf7b7d_t.jpeg" alt="register" id="register" style="width:100%;">
+  <div class="centered">EXERCISE UNTIL THE BODY OBEYS</div>
+</div>
+       
 
 
 
