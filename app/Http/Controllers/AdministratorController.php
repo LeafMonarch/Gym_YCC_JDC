@@ -70,7 +70,11 @@ class AdministratorController extends Controller
 
 
 
-
+    /**
+     * Remove the specified resource from storage.
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
     public function destroy($slug)
     {
         $user = User::where('slug', $slug);

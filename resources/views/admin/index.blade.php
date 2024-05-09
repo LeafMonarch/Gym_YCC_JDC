@@ -1,5 +1,15 @@
 
 <x-app-layout>
+
+@if (session()->has('message'))
+<div class="w-4/5 m-auto mt-10 pl-2">
+    <p class="w-2/6 mb-4 text-gray-50 bg-green-500 rounded-2xl py-4">
+        {{ session()->get('message') }}
+    </p>
+</div>
+@endif
+
+
 <div class="container mx-auto mt-10">
     <table class="min-w-full divide-y divide-gray-200 bg-white shadow-md rounded-lg overflow-hidden">
         <thead class="bg-gray-50">
@@ -22,7 +32,7 @@
                     <a href="/admin/{{ $user->slug }}/edit" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">Edit</a>
                     <form action="/admin/{{ $user->slug }}" method="POST" class="inline">
                         @csrf
-                        @method('DELETE')
+                        @method('delete')
                         <button type="submit" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">Delete</button>
                     </form>
                 </td>
