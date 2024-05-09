@@ -31,6 +31,7 @@ Route::middleware(['auth', CheckAccessLevel::class])->group(function () {
     Route::resource('/admin', AdministratorController::class);
 });
 
+
 // Route::get('/appointmentBlog', function () {
 //     return view('/appointmentBlog/index');
 // })->middleware(['auth', 'verified'])->name('appointment');
