@@ -23,8 +23,13 @@ Route::post('/appointment', [AppointmentsController::class, 'store'])->name('app
 
 Route::get('/newpage', [PagesController::class, 'newpage'])->name('newpage');
 
-Route::resource('/admin', AdministratorController::class);
+// Route::resource('/admin', AdministratorController::class);
 
+use App\Http\Middleware\CheckAccessLevel;
+
+Route::middleware(['auth', CheckAccessLevel::class])->group(function () {
+    Route::resource('/admin', AdministratorController::class);
+});
 
 // Route::get('/appointmentBlog', function () {
 //     return view('/appointmentBlog/index');

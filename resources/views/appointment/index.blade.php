@@ -32,12 +32,12 @@
     </div>
 @endif
 
-@if (Auth::check())
+@if (Auth::check() && Auth::user()->access_level == 2)
     <div class="pt-15 w-4/5 m-auto">
         <a 
-            href="/appointment/create"
+            href="/admin"
             class="bg-blue-500 uppercase bg-transparent text-black text-xs font-extrabold py-3 px-5 rounded-3xl">
-            Make an Appointment
+            Admin
         </a>
     </div>
 @endif
