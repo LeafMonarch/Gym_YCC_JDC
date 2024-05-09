@@ -5,6 +5,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\AppointmentsController;
+use App\Http\Controllers\AdministratorController;
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -21,6 +22,10 @@ Route::get('/dashboard', function () {
 Route::post('/appointment', [AppointmentsController::class, 'store'])->name('appointment.store');
 
 Route::get('/newpage', [PagesController::class, 'newpage'])->name('newpage');
+
+Route::resource('/admin', AdministratorController::class);
+
+
 // Route::get('/appointmentBlog', function () {
 //     return view('/appointmentBlog/index');
 // })->middleware(['auth', 'verified'])->name('appointment');
