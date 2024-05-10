@@ -18,11 +18,31 @@ class AdministratorController extends Controller
 
     public function create()
     {
-
+        return view('admin.create');
     }
 
 
+    public function store(Request $request)
+    {
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required',
+            'contact_number' => 'required',
+            'access_level' => 'required',
+            'password' => 'required'
+        ]);
 
+        User::create([
+            'name' => $request->input('name'),
+            'email' => $request->input('email'),
+            'slug' => SlugService::createSlug(User::class, 'slug', $request->email),
+            'contact_number' => $request->input('contact_number'),
+            'access_level' => $request->input('access_level'),
+            'password' => $request->input('password')
+        ]);
+
+        return redirect('/admin')->with('message', 'An User Account has been created!');
+    }
 
 
     public function show()
