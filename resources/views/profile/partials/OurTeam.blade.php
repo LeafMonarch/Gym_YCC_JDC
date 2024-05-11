@@ -12,8 +12,7 @@
     </head>
 
 
-
-<style>
+    <style>
 
 
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
@@ -1071,9 +1070,70 @@ button#Choose_Plan3
     margin: 30px;
 }
 
+/* Style for hover effect */
+.Hover_container {
+    position: relative;
+    width: 100%;
+    padding: 25px;
+}
 
-</style>
+.image {
+    display: block;
+    width: 350px;
+    height: 450px;
+    
+}
 
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom:0;
+    left: 0;
+    right: 0;
+    width: 400px;
+    height: 475px;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(128, 128, 128, 0.7); /* Use rgba for transparent color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style for text on hover */
+.Hover_text {
+    color: #f36100;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 0px;
+    display: flex;
+      font-family: Oswald;
+}
+
+.Additional_text {
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 0px;
+    margin-top: 20px;
+    display: flex;
+    margin-bottom: 100px;
+      font-family: Oswald;
+}
+
+.Hover_container:hover .overlay {
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+
+
+    </style>
 
 
     <body>
@@ -1113,9 +1173,11 @@ button#Choose_Plan3
 
 
             <div>
-
+<!--
                 <div class="grid-container_OurTeam">
-                    <div class="Services_grid-item_OurTeam"><img src="https://assets-global.website-files.com/61713dc07218ee71af5413af/65c5efdfed2c20699bcd0796_Noble%2520-%2520Case%2520Study-3.png" style="width: 350px;height: 450px"></div>
+                    
+               
+                    <div class="Services_grid-item_OurTeam"><img src="https://assets-global.website-files.com/61713dc07218ee71af5413af/65c5efdfed2c20699bcd0796_Noble%2520-%2520Case%2520Study-3.png" style="width: 350px;height: 450px></div>
                     <div class="Services_grid-item_OurTeam"><img src="https://nextlevelfitness.com/wp-content/uploads/2019/05/jack-haynes.jpg" style="width: 350px; height: 450px">></div>
                     <div class="Services_grid-item_OurTeam"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToWY2eTqm11K-yt6BVThAGWRFyJ54iXhwRZtVD5GDzLDzBD5CZJTyrI_M_5fFc0XP64FY&usqp=CAU" style="width: 350px; height: 450px">></div>
                     <div class="Services_grid-item_OurTeam"><img src="https://www.academyoffitnessprofessionals.com/wp-content/uploads/2016/07/exercise-studies-sports-course-4.png" style="width: 350px; height: 450px">></div>
@@ -1123,14 +1185,66 @@ button#Choose_Plan3
                     <div class="Services_grid-item_OurTeam"><img src="https://assets-global.website-files.com/61713dc07218ee71af5413af/65c5efdfed2c20699bcd0796_Noble%2520-%2520Case%2520Study-3.png" style="width: 350px; height: 450px">></div>
                 </div>
 
-            </div>
+            </div>-->
 
+
+<div class="grid-container_OurTeam">
+    <div class="Hover_container">
+        <img src="https://assets-global.website-files.com/61713dc07218ee71af5413af/65c5efdfed2c20699bcd0796_Noble%2520-%2520Case%2520Study-3.png"  class="image">
+        <div class="overlay">
+            <div class="Hover_text">Mark Laverty</div>
+             <div class="Additional_text">Gym Trainer</div>
+        </div>
+    </div>
+    <div class="Hover_container">
+        <img src="https://nextlevelfitness.com/wp-content/uploads/2019/05/jack-haynes.jpg" class="image">
+        <div class="overlay">
+            <div class="Hover_text">Arther Morgan</div>
+             <div class="Additional_text">Gym Trainer</div>
+        </div>
+    </div>
+   
+     <div class="Hover_container">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToWY2eTqm11K-yt6BVThAGWRFyJ54iXhwRZtVD5GDzLDzBD5CZJTyrI_M_5fFc0XP64FY&usqp=CAU" class="image">
+        <div class="overlay">
+            <div class="Hover_text">Rachel O Connor</div>
+             <div class="Additional_text">Gym Trainer</div>
+        </div>
+    </div>
+    
+     <div class="Hover_container">
+        <img src="https://www.academyoffitnessprofessionals.com/wp-content/uploads/2016/07/exercise-studies-sports-course-4.png" class="image">
+        <div class="overlay">
+            <div class="Hover_text">Ben Willers</div>
+             <div class="Additional_text">Gym Trainer</div>
+        </div>
+    </div>
+    
+    
+     <div class="Hover_container">
+        <img src="https://production-next-images-cdn.thumbtack.com/i/479108474996326404/desktop/standard/400square-legacy" class="image">
+        <div class="overlay">
+            <div class="Hover_text">Mark Doey</div>
+             <div class="Additional_text">Gym Trainer</div>
+            
+        </div>
+    </div>
+    
+    
+     <div class="Hover_container">
+        <img src="https://www.uaepersonaltrainers.com/wp-content/uploads/2023/02/Strength-building-personal-trainer-in-Abu-Dhabi-Female-coach-Katya-e1686908841778.webp" class="image">
+        <div class="overlay">
+            <div class="Hover_text">Sarah Creagh</div>
+             <div class="Additional_text">Gym Trainer</div>
+        </div>
+    </div>
+   
+</div>
 
 
 
 
                                         </div>         
-
 
 
 
