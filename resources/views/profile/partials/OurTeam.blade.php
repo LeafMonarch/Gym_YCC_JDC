@@ -14,7 +14,6 @@
 
     <style>
 
-
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
 
@@ -1132,7 +1131,6 @@ button#Choose_Plan3
 }
 
 
-
     </style>
 
 
@@ -1173,19 +1171,7 @@ button#Choose_Plan3
 
 
             <div>
-<!--
-                <div class="grid-container_OurTeam">
-                    
-               
-                    <div class="Services_grid-item_OurTeam"><img src="https://assets-global.website-files.com/61713dc07218ee71af5413af/65c5efdfed2c20699bcd0796_Noble%2520-%2520Case%2520Study-3.png" style="width: 350px;height: 450px></div>
-                    <div class="Services_grid-item_OurTeam"><img src="https://nextlevelfitness.com/wp-content/uploads/2019/05/jack-haynes.jpg" style="width: 350px; height: 450px">></div>
-                    <div class="Services_grid-item_OurTeam"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToWY2eTqm11K-yt6BVThAGWRFyJ54iXhwRZtVD5GDzLDzBD5CZJTyrI_M_5fFc0XP64FY&usqp=CAU" style="width: 350px; height: 450px">></div>
-                    <div class="Services_grid-item_OurTeam"><img src="https://www.academyoffitnessprofessionals.com/wp-content/uploads/2016/07/exercise-studies-sports-course-4.png" style="width: 350px; height: 450px">></div>
-                    <div class="Services_grid-item_OurTeam"><img src="https://assets-global.website-files.com/61713dc07218ee71af5413af/65c5efdfed2c20699bcd0796_Noble%2520-%2520Case%2520Study-3.png" style="width: 350px; height: 450px">></div>
-                    <div class="Services_grid-item_OurTeam"><img src="https://assets-global.website-files.com/61713dc07218ee71af5413af/65c5efdfed2c20699bcd0796_Noble%2520-%2520Case%2520Study-3.png" style="width: 350px; height: 450px">></div>
-                </div>
 
-            </div>-->
 
 
 <div class="grid-container_OurTeam">
@@ -1194,6 +1180,7 @@ button#Choose_Plan3
         <div class="overlay">
             <div class="Hover_text">Mark Laverty</div>
              <div class="Additional_text">Gym Trainer</div>
+              <div class="Additional_text">Weights</div>
         </div>
     </div>
     <div class="Hover_container">
@@ -1201,6 +1188,7 @@ button#Choose_Plan3
         <div class="overlay">
             <div class="Hover_text">Arther Morgan</div>
              <div class="Additional_text">Gym Trainer</div>
+             <div class="Additional_text">Cardio</div>
         </div>
     </div>
    
@@ -1209,6 +1197,7 @@ button#Choose_Plan3
         <div class="overlay">
             <div class="Hover_text">Rachel O Connor</div>
              <div class="Additional_text">Gym Trainer</div>
+              <div class="Additional_text">Diet</div>
         </div>
     </div>
     
@@ -1217,6 +1206,7 @@ button#Choose_Plan3
         <div class="overlay">
             <div class="Hover_text">Ben Willers</div>
              <div class="Additional_text">Gym Trainer</div>
+              <div class="Additional_text">Aerobics</div>
         </div>
     </div>
     
@@ -1226,6 +1216,7 @@ button#Choose_Plan3
         <div class="overlay">
             <div class="Hover_text">Mark Doey</div>
              <div class="Additional_text">Gym Trainer</div>
+             <div class="Additional_text">Machines</div>
             
         </div>
     </div>
@@ -1236,6 +1227,7 @@ button#Choose_Plan3
         <div class="overlay">
             <div class="Hover_text">Sarah Creagh</div>
              <div class="Additional_text">Gym Trainer</div>
+             <div class="Additional_text">Yoga</div>
         </div>
     </div>
    
