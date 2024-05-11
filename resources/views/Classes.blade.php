@@ -772,11 +772,11 @@ table {
         <div class="header">
             <img src="https://themewagon.github.io/gymlife/img/logo.png" width="175px" height="50px" id="Logo" alt="Logo">
             <div id="Ancher_div">
-                <a href="index.html"><h2 class="Ancher"> HOME </h2></a>
-                <a href="About_Us.html"><h2 class="Ancher"> ABOUT US </h2></a>
-                <a href="Classes.html"><h2 class="Ancher"> CLASSES </h2></a>
-                <h2 class="Ancher"> SERVICES </h2>
-                <h2 class="Ancher"> OUR TEAM </h2>
+              <a href="dashboard"><h2 class="Ancher"> HOME </h2></a>
+              <a href="About_Us"><h2 class="Ancher"> ABOUT US </h2></a>
+              <a href="Classes"><h2 class="Ancher"> CLASSES </h2></a>
+              <a href="Services"><h2 class="Ancher"> SERVICES </h2></a>
+              <a href="OurTeam"><h2 class="Ancher"> OUR TEAM </h2></a>
             </div>
         </div>
 

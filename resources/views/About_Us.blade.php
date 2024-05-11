@@ -555,8 +555,8 @@ h1#Middle_White
             <a href="dashboard"><h2 class="Ancher"> HOME </h2></a>
             <a href="About_Us"><h2 class="Ancher"> ABOUT US </h2></a>
             <a href="Classes"><h2 class="Ancher"> CLASSES </h2></a>
-            <a href="About_Us"><h2 class="Ancher"> SERVICES </h2></a>
-            <h2 class="Ancher"> OUR TEAM </h2>
+            <a href="Services"><h2 class="Ancher"> SERVICES </h2></a>
+            <a href="OurTeam"><h2 class="Ancher"> OUR TEAM </h2></a>
         </div>
     </div>
     <div id="intro">
@@ -600,7 +600,7 @@ h1#Middle_White
                     <h1 id="h1_Left">TRAIN WITH EXPERTS</h1>
                 </div>
                 <div>
-                    <h3>APPOINTMENT</h3>
+                  <a href="appointment"><h3 class="Ancher"> APPOINTMENT </h2></a>
                 </div>  
             </div>
         </div>
