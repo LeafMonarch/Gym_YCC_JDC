@@ -1,13 +1,18 @@
-<!--https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_slideshow-->
+<!--https://www.w3schools.com/css/tryit.asp?filename=trycss_grid-->
+<!--https://codepen.io/vetrisuriya/pen/mdLxxQx-->
 
-<link href="newcss.css" rel="stylesheet" type="text/css"/>
+
 <!DOCTYPE html>
-<html> 
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Course notes example code</title>
+        <link href="newcss.css" rel="stylesheet" type="text/css">
+    </head>
 
 
-
-<style>
-
+    <style>
 
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
@@ -303,7 +308,6 @@ img {
 
 
 
-
 .About-Us-container
 {
 
@@ -422,6 +426,7 @@ div#booking_headers
     align-items: center;
     height: 120px;
     width: 100%;
+    background-color: #151515;
 }
 
 
@@ -1051,282 +1056,229 @@ button#Choose_Plan3
 }
 
 
-</style>
 
-
-
-    <head>
-  
-        <title>Course notes example code</title>
-        <meta charset="UTF-8">
-        <link href="newcss.css" rel="stylesheet" type="text/css"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
-    <div class="header">
-       <img src="https://themewagon.github.io/gymlife/img/logo.png" width="175px" height="50px" id="Logo" alt="Logo">
-        
-        
-        
-        
-    <div id ="Ancher_div">
-    <a href="dashboard"><h2 id="Ancher"> HOME </h2></a>
-    <a href="About_Us"><h2 id="Ancher"> ABOUT US </h2></a>
-    <a href="Classes"><h2 class="Ancher"> CLASSES </h2></a>
-    <a href="Services"><h2 id="Ancher"> SERVICES </h2></a>
-    <a href="OurTeam"><h2 id="Ancher"> OUR TEAM </h2></a>
-    </div>
-        
-  
-    
-      
-    </div>
-
-
-
-    
-    <div id="intro">
-<div class="homepage_slideshow-container">
-
-<div class="mySlides fade">
- <img src="https://marketplace.canva.com/EAE0qsxUnb0/1/0/1600w/canva-yellow-and-black-gym-fitness-facebook-post-modern-style-9fU0wmvI9Bo.jpg" style="width:1500px;  height:750px">
-</div>
-
-<div class="mySlides fade">
-  <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/fitness-trainer-ad-template-design-dc12bef6f4b6b1aa29fa8f160cb6e656_screen.jpg?ts=1687116096" style="width:1500px;  height:750px">
-</div>
-
-<!--<div class="mySlides fade">
-  <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/d7978484526511.5d5f66c475a9e.png" style="width:15 00px;  height:750px">
-</div>-->
-
-</div>
-<br>
-
-
-
-<div style="text-align:center">
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-</div>
-
-
-<script>
-    
-// for the slide show :     https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_slideshow_auto    
-    
-let slideIndex = 0;
-showSlides();
-
-function showSlides() {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 2000); // Change image every 2 seconds
+.grid-container_OurTeam {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    padding: 10px;
+    justify-items: start;
 }
-</script>
+.Services_grid-item_OurTeam {
+    text-align: center;
+    margin: 30px;
+}
+
+/* Style for hover effect */
+.Hover_container {
+    position: relative;
+    width: 100%;
+    padding: 25px;
+}
+
+.image {
+    display: block;
+    width: 350px;
+    height: 450px;
+    
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom:0;
+    left: 0;
+    right: 0;
+    width: 400px;
+    height: 475px;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(128, 128, 128, 0.7); /* Use rgba for transparent color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style for text on hover */
+.Hover_text {
+    color: #f36100;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 0px;
+    display: flex;
+      font-family: Oswald;
+}
+
+.Additional_text {
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 0px;
+    margin-top: 20px;
+    display: flex;
+    margin-bottom: 100px;
+      font-family: Oswald;
+}
+
+.Hover_container:hover .overlay {
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
 
 
-<div>
-    
-    <h2 id="h2_Nohover">Why choose us?</h2>
-    
-    <div class="grid-container">
-        <div class="grid-item"> <img src="https://www.shareicon.net/data/2016/10/12/843267_weight_512x512.png" style="width:30%"><h4>Excellent equipment</h4></div>
- <div class="grid-item"> <img src="https://myplate-prod.azureedge.us/sites/default/files/styles/medium/public/2020-12/icon-circle-apple-broccoli--256.png?itok=usNhH0-9" style="width:45%"><h4>Dietary Advice</h4></div>
- <div class="grid-item"> <img src="https://static.vecteezy.com/system/resources/previews/009/267/736/original/heart-rate-icon-free-png.png" style="width:35%"><h4>Health Advice</h4></div> 
- <div class="grid-item"> <img src="https://cdn-icons-png.flaticon.com/512/7922/7922268.png" style="width:35%"><h4>Excellent Coaches</h4></div>
-    </div>
-    
-    
-    <h2 id="h2_Nohover">what we can offer</h2>
-    
-  <div id="adds">
+    </style>
 
-  <section id="add_gallery">
-    <div id="each_add"><img src="https://themewagon.github.io/gymlife/img/classes/class-1.jpg" style="width:100%"><h2 id="h2_Nohover">Weigh Advice</h2></div>
-    <div id="each_add"><img src="https://themewagon.github.io/gymlife/img/classes/class-2.jpg" style="width:100%"><h2 id="h2_Nohover">Cardio</h2></div>
-    <div id="each_add"><img src="https://themewagon.github.io/gymlife/img/classes/class-3.jpg" style="width:100%"><h2 id="h2_Nohover">Strength</h2></div>
-  </section>
+
+    <body>
+        <div class="header">
+            <img src="https://themewagon.github.io/gymlife/img/logo.png" width="175px" height="50px" id="Logo" alt="Logo">
+            <div id="Ancher_div">
+                <a href="index.html"><h2 class="Ancher"> HOME </h2></a>
+                <a href="About_Us.html"><h2 class="Ancher"> ABOUT US </h2></a>
+                <a href="Classes.html"><h2 class="Ancher"> CLASSES </h2></a>
+                <a href="Services.html"><h2 class="Ancher"> SERVICES </h2></a>
+                <a href="OurTeam.html"><h2 id="Ancher"> OUR TEAM </h2></a>
+            </div>
+        </div>
+
+
+
+        <div id="intro">
+            <img src="https://content.wepik.com/statics/194469168/preview-page0.jpg" style="width:100%; height:500px">
+        </div>
+
         
+        <div id="Our_Team">
+            <div id="booking_headers">
+                <div>
+                    <h2 id="h2_left">OUR TEAM</h2>
+                    <h1 id="h1_Left">TRAIN WITH EXPERTS</h1>
+                </div>
+                <div>
+                    <h3>APPOINTMENT</h3>
+                </div>  
+            </div>
+        
+        
+        <div>
+
+            <h2 id="h2_Nohover">PUSH YOUR LIMITS FORWARD</h2>
+
+
+            <div>
+
+
+
+<div class="grid-container_OurTeam">
+    <div class="Hover_container">
+        <img src="https://assets-global.website-files.com/61713dc07218ee71af5413af/65c5efdfed2c20699bcd0796_Noble%2520-%2520Case%2520Study-3.png"  class="image">
+        <div class="overlay">
+            <div class="Hover_text">Mark Laverty</div>
+             <div class="Additional_text">Gym Trainer</div>
+              <div class="Additional_text">Weights</div>
+        </div>
     </div>
-    
-    
+    <div class="Hover_container">
+        <img src="https://nextlevelfitness.com/wp-content/uploads/2019/05/jack-haynes.jpg" class="image">
+        <div class="overlay">
+            <div class="Hover_text">Arther Morgan</div>
+             <div class="Additional_text">Gym Trainer</div>
+             <div class="Additional_text">Cardio</div>
+        </div>
+    </div>
    
+     <div class="Hover_container">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToWY2eTqm11K-yt6BVThAGWRFyJ54iXhwRZtVD5GDzLDzBD5CZJTyrI_M_5fFc0XP64FY&usqp=CAU" class="image">
+        <div class="overlay">
+            <div class="Hover_text">Rachel O Connor</div>
+             <div class="Additional_text">Gym Trainer</div>
+              <div class="Additional_text">Diet</div>
+        </div>
+    </div>
     
-    <div class="row">
-        
-  <div class="column">
-      <div id="each_add"><img src="https://themewagon.github.io/gymlife/img/classes/class-4.jpg" style="width:100%"><h2 id="h2_Nohover">Improvement</h2></div>
-  </div>
-  <div class="column">
-      <div id="each_add"><img src="https://themewagon.github.io/gymlife/img/classes/class-5.jpg" style="width:100%"><h2 id="h2_Nohover">Training</h2></div>
-  </div>
- 
+     <div class="Hover_container">
+        <img src="https://www.academyoffitnessprofessionals.com/wp-content/uploads/2016/07/exercise-studies-sports-course-4.png" class="image">
+        <div class="overlay">
+            <div class="Hover_text">Ben Willers</div>
+             <div class="Additional_text">Gym Trainer</div>
+              <div class="Additional_text">Aerobics</div>
+        </div>
+    </div>
+    
+    
+     <div class="Hover_container">
+        <img src="https://production-next-images-cdn.thumbtack.com/i/479108474996326404/desktop/standard/400square-legacy" class="image">
+        <div class="overlay">
+            <div class="Hover_text">Mark Doey</div>
+             <div class="Additional_text">Gym Trainer</div>
+             <div class="Additional_text">Machines</div>
+            
+        </div>
+    </div>
+    
+    
+     <div class="Hover_container">
+        <img src="https://www.uaepersonaltrainers.com/wp-content/uploads/2023/02/Strength-building-personal-trainer-in-Abu-Dhabi-Female-coach-Katya-e1686908841778.webp" class="image">
+        <div class="overlay">
+            <div class="Hover_text">Sarah Creagh</div>
+             <div class="Additional_text">Gym Trainer</div>
+             <div class="Additional_text">Yoga</div>
+        </div>
+    </div>
+   
 </div>
-</div>
 
 
 
 
+                                        </div>         
 
 
 
 
-
-
-
-<div id="map">
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2345.8477083462853!2d-6.377816123324277!3d53.98772737248233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4860cdba2664d741%3A0xde824009b1997b4!2sDKIT%20Sport!5e0!3m2!1sen!2sie!4v1714572737013!5m2!1sen!2sie" width="1200" height="700" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-</div>
-
-
-
-  <section class="pricing-section">
-                    <div class="pricing">
-                        <div class="pricing-header">
-
-                        </div>
-                        <div class="pricing-body">
-                            <div class="pricing-body-header">
-
-                                <div class="pricing-checkbox">
-
-                                </div>
-                            </div>
-                            <div class="pricing-body-plans">
-
-                                <div class="active" id="pricing__monthly__plan">
-                                    <div>
-                                        <div class="card">
-                                            <div class="card-header">
-
-                                                <h2 class="card-price">$30</h2>
-                                            </div>
-                                            <div class="card-body">
-                                                <ul>
-                                                    <li>Free riding</li>
-                                                    <li>Unlimited equipments</li>
-                                                    <li>Personal trainer</li>
-                                                    <li>Weight losing classes</li>
-                                                    <li>Month to mouth</li>
-                                                    <li>No time restriction</li>
-
-                                                </ul>
-                                            </div>
-                                            <div class="card-footer">
-                                                <button id="Choose_Plan1">Choose Plan</button>
-                                            </div>
-                                        </div>
-                                        <div class="card">
-                                            <div class="card-header">
-
-                                                <h2 class="card-price">$50</h2>
-                                                <div class="card-users">
-
-
-
+                                        <footer>
+                                            <div class="row_icons">
+                                                <div class="footer_column">
+                                                    <img src="https://png.pngtree.com/png-clipart/20230805/original/pngtree-icon-of-an-orange-colored-flat-and-rounded-map-marker-in-vector-format-vector-picture-image_9721238.png" width="30%" height="40%">
+                                                    <h2 class="h2_Nohover"></h2>
+                                                </div>
+                                                <div class="footer_column">
+                                                    <img src="https://cdn-icons-png.freepik.com/512/8568/8568051.png" width="30%" height="40%">
+                                                    <h2 class="h2_Nohover"></h2>
+                                                </div>
+                                                <div class="footer_column">
+                                                    <img src="https://www.freepnglogos.com/uploads/email-png/email-icon-philippe-the-original-31.png" width="30%" height="40%">
+                                                    <h2 class="h2_Nohover"></h2>
                                                 </div>
                                             </div>
-                                            <div class="card-body">
-                                                <ul>
-                                                    <li>All starter features, plus:</li>
-                                                    <li>Free riding</li>
-                                                    <li>Unlimited equipments</li>
-                                                    <li>Personal trainer</li>
-                                                    <li>Weight losing classes</li>
-                                                    <li>Month to mouth</li>
-                                                    <li>No time restriction</li>
-                                                </ul>
+                                            <section></section>
+                                            <div class="footer_row">
+                                                <div class="footer_column">
+                                                    <img src="https://themewagon.github.io/gymlife/img/logo.png" width="175px" height="50px" id="Logo" alt="Logo">
+                                                    <p>Contact us on 067-4566-6663 or Email us at ExampleEmail@gmail.com</p>
+                                                </div>
+                                                <div class="footer_column">
+                                                    <h2>USEFUL LINKS</h2>
+                                                    <p>About</p>
+                                                    <p>Blog</p>
+                                                    <p>Classes</p>
+                                                    <p>Contact</p>
+                                                </div>
+                                                <div class="footer_column">
+                                                    <h2>Tips & Guides</h2>
+                                                    <p>Physical fitness may help prevent depression, anxiety 3 min read 20 Comment</p>
+                                                    <p>Fitness: The best exercise to lose belly fat and tone up... 3 min read 20 Comment</p>
+                                                </div>
                                             </div>
-                                            <div class="card-footer">
-                                                <button id ="Choose_Plan2">Choose Plan</button>
-                                            </div>
-                                        </div>
-                                        <div class="card">
-                                            <div class="card-header">
-
-                                                <h2 class="card-price">$100</h2>
-                                            </div>
-                                            <div class="card-body">
-                                                <ul>
-                                                    <li>All Pro features</li>
-                                                    <li>Free riding</li>
-                                                    <li>Unlimited equipments</li>
-                                                    <li>Personal trainer</li>
-                                                    <li>Weight losing classes</li>
-                                                    <li>Month to month</li>
-                                                    <li>No time restriction</li>
-                                                </ul>
-                                            </div>
-                                            <div class="card-footer">
-                                                <button id="Choose_Plan3">Choose Plan</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="pricing__anually__plan">
-                                    <div>
-                                        <div class="card">
-                                            <div class="card-header">
-                                                <span class="card-title">Starter</span>
-                                                <h2 class="card-price">$19</h2>
-                                            </div>
-
-                                            </section>  
+                                        </footer>
 
 
 
 
-
-<footer>
-<div class="row_icons">
-    
-      <div class="footer_column">
-      <img src="https://png.pngtree.com/png-clipart/20230805/original/pngtree-icon-of-an-orange-colored-flat-and-rounded-map-marker-in-vector-format-vector-picture-image_9721238.png" width=30% height=40%  ><h2 id="h2_Nohover"></h2>
-      </div>
-      <div class="footer_column">
-      <img src="https://cdn-icons-png.freepik.com/512/8568/8568051.png" width=30% height=40% ><h2 id="h2_Nohover"></h2>
-      </div>
-      <div class="footer_column">
-      <img src="https://www.freepnglogos.com/uploads/email-png/email-icon-philippe-the-original-31.png" width=30%  height="40%"><h2 id="h2_Nohover"></h2>
-      </div>
-  
-  </div>
-  
-    
-    <section></section>
-    
-    <div class="footer_row">
-  <div class="footer_column" >
-      <img src="https://themewagon.github.io/gymlife/img/logo.png" width="175px" height="50px" id="Logo" alt="Logo">
-    <p>Contact us on 067-4566-6663 or Email us at ExampleEmail@gmail.com</p>
-  </div>
-  <div class="footer_column">
-    <h2>USEFUL LINKS</h2>
-    <p>About</p>
-     <p>Blog</p>
-      <p>Classes</p>
-            <p>Contact</p>
-  </div>
-  <div class="footer_column">
-      <h2>Tips & Guides</h2>
-    <p>Physical fitness may help prevent depression, anxiety
-3 min read 20 Comment</p>
-     <p>Fitness: The best exercise to lose belly fat and tone up...
-3 min read 20 Comment</p>
-     
- 
-</div>
-    
-</footer>
+                                        </body>
+                                        </html>

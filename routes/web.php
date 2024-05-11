@@ -32,6 +32,17 @@ Route::get('/Classes', function () {
     return view('Classes');
 });
 
+Route::get('/OurTeam', function () {
+    return view('OurTeam');
+});
+
+Route::get('/Services', function () {
+    return view('Services');
+});
+
+Route::get('/welcome', function () {
+    return view('welcome');
+});
 
 // Route::resource('/admin', AdministratorController::class);
 
