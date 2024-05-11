@@ -471,6 +471,75 @@ img#slide_images
 }
 
 
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+  margin-top: 150px;
+  margin-bottom: 100px;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: Oswald;
+  font-size: 50px;
+  font-weight: bold
+   
+}
+
+img#register
+{
+    height: 600px;
+}
+
+h1#Middle_White
+{
+    color: white;
+    font-size: 40px;
+}
+
+
+
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+
+
+.reviews {
+  position: relative;
+  max-width: 600px;
+  margin: auto;
+}
+
+.slide {
+  display: none;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  padding: 16px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  z-index: 100;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
 
 
 
@@ -600,8 +669,66 @@ function showSlides() {
         
         
         
+<div class="container">
+  <img src="https://prod-ne-cdn-media.puregym.com/media/792480/deadlift-feature.jpg?quality=80&width=992" alt="register" id="register" style="width:100%;">
+  <div class="centered">REGISTRATION NOW TO GET MORE DEALS</div>
+</div>
         
         
+<h1 id="Middle_White">OUR CILENT SAY</h1>
+
+
+
+
+
+
+
+
+
+<div id="Reviews">
+    <div class="reviews">
+        <div class="slideshow-container">
+            <div class="review-slide">
+                <img src="https://theabsgym.com/wp-content/uploads/2023/11/Carl-Rourke.jpg" alt="Carl Rourke">
+            </div>
+            <div class="review-slide">
+                <img src="https://theabsgym.com/wp-content/uploads/2023/11/Claire-Pugh.jpg" alt="Claire Pugh">
+            </div>
+            <div class="review-slide">
+                <img src="https://theabsgym.com/wp-content/uploads/2023/11/Laura-Turco.jpg" alt="Claire Pugh">
+            </div>
+        </div>
+        <a class="prev" onclick="changeReviewSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeReviewSlide(1)">&#10095;</a>
+    </div>
+</div>
+
+<script>
+    let reviewSlideIndex = 0;
+    let slides = document.getElementsByClassName("review-slide");
+    showReviewSlides();
+
+    function showReviewSlides() {
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[reviewSlideIndex].style.display = "block";
+    }
+
+    function changeReviewSlide(n) {
+        reviewSlideIndex += n;
+        if (reviewSlideIndex < 0) {
+            reviewSlideIndex = slides.length - 1;
+        }
+        if (reviewSlideIndex >= slides.length) {
+            reviewSlideIndex = 0;
+        }
+        showReviewSlides();
+    }
+</script>
+
+
+
 
         
         

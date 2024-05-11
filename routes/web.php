@@ -23,6 +23,16 @@ Route::post('/appointment', [AppointmentsController::class, 'store'])->name('app
 
 Route::get('/newpage', [PagesController::class, 'newpage'])->name('newpage');
 
+
+Route::get('/About_Us', function () {
+    return view('About_Us');
+});
+
+Route::get('/Classes', function () {
+    return view('Classes');
+});
+
+
 // Route::resource('/admin', AdministratorController::class);
 
 use App\Http\Middleware\CheckAccessLevel;
