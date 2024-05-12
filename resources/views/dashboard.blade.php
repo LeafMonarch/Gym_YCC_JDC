@@ -71,14 +71,16 @@ div.header {
     opacity: 1;
     padding: 5px;
     display: flex;
-    justify-content: flex-start;
-    margin-left: 20px;
-    margin-right: 20px;
+    justify-content: center;
+    /* margin-left: 20px;
+    margin-right: 20px; */
     min-width: 1454px;
     z-index: 1;
     align-content: center;
     align-items: center;
     padding-top: 30px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 h4
@@ -124,7 +126,9 @@ h3
 
 div.homepage_slideshow-container
 {
-    margin-left: 10px;
+    /* margin-left: 10px; */
+    display: flex;
+    justify-content: center;
 }
 
 #add_gallery{
@@ -249,7 +253,8 @@ img {
 
 /* Slideshow container */
 .slideshow-container {
-    max-width: 1500px;
+    /* max-width: 1500px; */
+    max-width: 100vw;
     position: relative;
     margin: auto;
     margin-top: 10px;
@@ -435,7 +440,8 @@ img#slide_images
 
 /* Slideshow container */
 .slideshow-container {
-    max-width: 1000px;
+    /* max-width: 1000px; */
+    max-width: 100%;
     position: relative;
     margin: auto;
 }
@@ -1083,16 +1089,14 @@ button#Choose_Plan3
 
 
 
-    
-    <div id="intro">
 <div class="homepage_slideshow-container">
 
 <div class="mySlides fade">
- <img src="https://marketplace.canva.com/EAE0qsxUnb0/1/0/1600w/canva-yellow-and-black-gym-fitness-facebook-post-modern-style-9fU0wmvI9Bo.jpg" style="width:1500px;  height:750px">
+ <img src="https://marketplace.canva.com/EAE0qsxUnb0/1/0/1600w/canva-yellow-and-black-gym-fitness-facebook-post-modern-style-9fU0wmvI9Bo.jpg" style="width:1400px;  height:750px">
 </div>
 
 <div class="mySlides fade">
-  <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/fitness-trainer-ad-template-design-dc12bef6f4b6b1aa29fa8f160cb6e656_screen.jpg?ts=1687116096" style="width:1500px;  height:750px">
+  <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/fitness-trainer-ad-template-design-dc12bef6f4b6b1aa29fa8f160cb6e656_screen.jpg?ts=1687116096" style="width:1400px;  height:750px">
 </div>
 
 <!--<div class="mySlides fade">
@@ -1149,7 +1153,7 @@ function showSlides() {
     </div>
     
     
-    <h2 id="h2_Nohover">what we can offer</h2>
+    <h2 id="h2_Nohover">What we can offer</h2>
     
   <div id="adds">
 
