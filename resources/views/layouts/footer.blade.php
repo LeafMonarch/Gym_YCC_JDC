@@ -1,87 +1,102 @@
-<footer class="bg-gray-800 py-20 mt-20">
+<footer class="bg-black py-20 mt-20">
     <div class="sm:grid grid-cols-3 w-4/5 pb-10 m-auto border-b-2 border-gray-700">
         <div>
-            <h3 class="text-l sm:font-bold text-gray-100">
-                Pages
+            <h3 class="text-l sm:font-bold text-white">
+                WEB PAGES
             </h3>
 
-            <ul class="py-4 sm:text-s pt-4 text-gray-400">
+            <ul class="py-4 sm:text-s pt-4 text-white">
                 <li class="pb-1">
                     <a href="/">
-                        Home
+                        HOME
                     </a>
                 </li>
                 <li class="pb-1">
-                    <a href="/blog">
-                        Blog
+                    <a href="/About_Us">
+                        ABOUT US
+                    </a>
+                </li>
+                <li class="pb-1">
+                    <a href="/Classes">
+                        CLASSES
+                    </a>
+                </li>
+                <li class="pb-1">
+                    <a href="/Services">
+                        SERVICES
+                    </a>
+                </li>
+                <li class="pb-1">
+                    <a href="/OurTeam">
+                        OUR TEAM
+                    </a>
+                </li>
+                <li class="pb-1">
+                    <a href="/appointment">
+                        APPOINTMENTS
                     </a>
                 </li>
                 <li class="pb-1">
                     <a href="/login">
-                        Login
+                        LOGIN
                     </a>
                 </li>
                 <li class="pb-1">
                     <a href="/register">
-                        Register
+                        REGISTER
                     </a>
                 </li>
             </ul>
         </div>
 
         <div>
-            <h3 class="text-l sm:font-bold text-gray-100">
-                Find Us
+            <h3 class="text-l sm:font-bold text-white">
+                FIND US
             </h3>
 
-            <ul class="py-4 sm:text-s pt-4 text-gray-400">
+            <ul class="py-4 sm:text-s pt-4 text-white">
                 <li class="pb-1">
                     <a href="/">
-                        What we do
+                        WHAT WE DO
                     </a>
                 </li>
                 <li class="pb-1">
                     <a href="/">
-                        Address
+                        ADDRESS
                     </a>
                 </li>
                 <li class="pb-1">
                     <a href="/">
-                        Phone
+                        PHONE
                     </a>
                 </li>
                 <li class="pb-1">
                     <a href="/">
-                        Contact
+                        CONTACT
                     </a>
                 </li>
             </ul>
         </div>
 
         <div>
-            <h3 class="text-l sm:font-bold text-gray-100">
-                Latest posts
+            <h3 class="text-l sm:font-bold text-white">
+                LATEST APPOINTMENTS
             </h3>
 
-            <ul class="py-4 sm:text-s pt-4 text-gray-400">
+            <ul class="py-4 sm:text-s pt-4 text-white">
                 <li class="pb-1">
                     <a href="/">
-                        Why we love tech
+                        WHY SHOULD WE PRACTICE MEDITATION
                     </a>
                 </li>
                 <li class="pb-1">
                     <a href="/">
-                        Why we love design
+                        CALISTHENICS IS KEY TO BALANCE
                     </a>
                 </li>
                 <li class="pb-1">
                     <a href="/">
-                        Why to use Laravel
-                    </a>
-                </li>
-                <li class="pb-1">
-                    <a href="/">
-                        Why PHP is the best
+                        WORK, EXERCISE, LIVE
                     </a>
                 </li>
             </ul>
