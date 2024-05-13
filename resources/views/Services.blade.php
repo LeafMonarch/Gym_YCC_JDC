@@ -78,7 +78,7 @@ div.header {
     opacity: 1;
     padding: 5px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     margin-left: 20px;
     margin-right: 20px;
     min-width: 1454px;

@@ -20,7 +20,7 @@
 
 
     <body class="font-sans antialiased">
-        <div class="min-h-screen bg-gray-100 ">
+        <div class="min-h-screen bg-black text-white ">
             @include('layouts.navigation')
             
             <!-- Page Heading -->
@@ -38,9 +38,9 @@
             </main>
         </div>
 
-        <div>
+        {{-- <div>
             @yield('content')
-        </div>
+        </div> --}}
 
          <div>
             @include('layouts.footer')

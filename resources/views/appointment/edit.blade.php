@@ -36,7 +36,7 @@
 
             <select 
             name="exercise_type"
-            class="bg-transparent text-greyyy block border-b-2 w-full h-20 text-3xl outline-none my-2 hover:bg-greyyy hover:text-grey">
+            class="bg-black text-white block border-b-2 w-full h-20 text-3xl outline-none my-2 hover:bg-greyyy hover:text-grey">
             <option value="">{{ $appointment->exercise_type }}</option>
             @foreach($exercises as $exercise)
             <option value="{{ $exercise->exercise_type }}">{{ $exercise->exercise_type }}</option>
@@ -52,7 +52,7 @@
 
             <select 
             name="coach_name"
-            class="bg-transparent text-greyyy block border-b-2 w-full h-20 text-3xl outline-none my-2 hover:bg-greyyy hover:text-grey">
+            class="bg-black text-greyyy block border-b-2 w-full h-20 text-3xl outline-none my-2 hover:bg-greyyy hover:text-grey">
             <option value="">{{ $appointment->coach_name }}</option>
             @foreach($coaches as $coach)
             <option value="{{ $coach->name }}">{{ $coach->name }}</option>
@@ -68,7 +68,7 @@
     
             <button    
                 type="submit"
-                class="uppercase mt-15 bg-blue-500 text-gray-100 text-lg font-extrabold py-4 px-8 rounded-3xl">
+                class="uppercase mt-15 bg-orange-500 text-gray-100 text-lg font-extrabold py-4 px-8 rounded-3xl">
                 Update Appointment
             </button>
         </form>
